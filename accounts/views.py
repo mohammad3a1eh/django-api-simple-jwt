@@ -32,7 +32,7 @@ class RegisterView(generics.CreateAPIView):
             key='access_token',
             value=str(access),
             httponly=True,
-            secure=True,
+            secure=False,
             samesite='Lax',
             max_age=ACCESS_TOKEN_LIFETIME_SECONDS
         )
@@ -41,7 +41,7 @@ class RegisterView(generics.CreateAPIView):
             key='refresh_token',
             value=str(refresh),
             httponly=True,
-            secure=True,
+            secure=False,
             samesite='Lax',
             max_age=REFRESH_TOKEN_LIFETIME_SECONDS
         )
@@ -71,7 +71,7 @@ class CustomTokenRefreshView(APIView):
             key='access_token',
             value=access_token,
             httponly=True,
-            secure=True,
+            secure=False,
             samesite='Lax',
             max_age=ACCESS_TOKEN_LIFETIME_SECONDS
         )
@@ -80,7 +80,7 @@ class CustomTokenRefreshView(APIView):
             key='refresh_token',
             value=refresh_token,
             httponly=True,
-            secure=True,
+            secure=False,
             samesite='Lax',
             max_age=REFRESH_TOKEN_LIFETIME_SECONDS
         )
@@ -106,7 +106,7 @@ class CustomTokenObtainPairView(TokenObtainPairView):
             key='access_token',
             value=access_token,
             httponly=True,
-            secure=True,
+            secure=False,
             samesite='Lax',
             max_age=ACCESS_TOKEN_LIFETIME_SECONDS
         )
@@ -115,7 +115,7 @@ class CustomTokenObtainPairView(TokenObtainPairView):
             key='refresh_token',
             value=refresh_token,
             httponly=True,
-            secure=True,
+            secure=False,
             samesite='Lax',
             max_age=REFRESH_TOKEN_LIFETIME_SECONDS
         )
