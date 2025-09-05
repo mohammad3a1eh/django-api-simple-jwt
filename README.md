@@ -3,7 +3,7 @@
 This project demonstrates a **step-by-step implementation** of a secure authentication system in **Django REST Framework** using **Simple JWT**.  
 Tokens are stored in **HttpOnly cookies** for better security against XSS attacks, and refresh tokens are blacklisted after rotation.
 
----
+![Login](login.png)
 
 ## 🚀 Features
 - User Registration with validation
@@ -12,8 +12,6 @@ Tokens are stored in **HttpOnly cookies** for better security against XSS attack
 - Logout with refresh token blacklisting
 - Middleware for cookie-based JWT authentication
 - Secure HttpOnly cookies (`secure`, `samesite`, `httponly`)
-
----
 
 ## 🛠 Installation
 
